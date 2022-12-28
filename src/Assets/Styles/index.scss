@@ -1,0 +1,161 @@
+    /* Variables */
+    
+    $primary-color:#3B8EF9;
+    $secondary-color:#F93B84;
+    $tertiary-color:#000095;
+    $light-color:#FFFFFF;
+    $dark-color:#0000;
+    /*  */
+    
+    html,
+    body {
+        width: 100%;
+        margin: 0;
+        box-sizing: border-box;
+    }
+    
+    a {
+        text-decoration: none;
+        color: inherit;
+    }
+    
+    .header {
+        background-image: url("../Images/hero.jpg");
+        height: 100vh;
+        /* Set a specified height */
+        background-position: center;
+        /* Center the image */
+        background-repeat: no-repeat;
+        /* Do not repeat the image */
+        background-size: cover;
+        /* Resize the background image to cover the entire container */
+        &-top {
+            margin: 0;
+            height: 60px;
+            background-color: $tertiary-color;
+            text-align: center;
+            font-size: 12px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            &-paragraph {
+                margin: 0;
+                color: lighten($tertiary-color, 60%)
+            }
+            &-link {
+                margin: 0;
+                text-decoration: underline;
+                color: lighten($secondary-color, 10%);
+                margin-left: 1rem;
+            }
+        }
+    }
+    
+    .navbar {
+        display: flex;
+        margin: auto 1rem;
+        align-items: center;
+        &-brand {}
+        &-container {
+            width: 100%;
+        }
+        &-toggler {
+            display: none;
+            &-icon {
+                -webkit-transition: all 0.25s;
+                position: absolute;
+                width: 30px;
+                height: 1px;
+                left: 15px;
+                top: 30px;
+                background-color: white;
+                &:before,
+                &:after {
+                    -webkit-transition: all 0.25s;
+                    width: 30px;
+                    height: 1px;
+                    left: 0;
+                    background: white;
+                    position: absolute;
+                    content: '';
+                }
+                &:before {
+                    top: -10px;
+                }
+                &:after {
+                    top: 10px;
+                }
+            }
+        }
+    }
+    
+    .nav {
+        display: flex;
+        justify-content: center;
+        &-item {
+            list-style-type: none;
+            color: $light-color;
+            margin: 1rem;
+        }
+    }
+    
+    @mixin button-bg($bg) {
+        background: $bg;
+        &:hover {
+            background: darken($bg, 8%);
+            transition: all .6s;
+        }
+        &:active {
+            background: darken($bg, 25%);
+        }
+    }
+    
+    @mixin button-border($bg) {
+        position: relative;
+        margin: 0 auto;
+        &:before {
+            content: "";
+            background: none;
+            border: 1px solid $bg;
+            border-radius: 30px;
+            display: block;
+            position: absolute;
+            top: 1rem;
+            left: 1rem;
+            right: 1rem;
+            bottom: 1rem;
+            pointer-events: none;
+            margin: -1.25rem
+        }
+    }
+    
+    .btn {
+        color: $light-color;
+        height: 60px;
+        min-width: 140px;
+        text-decoration: none;
+        padding: 0.5rem 2rem;
+        border-radius: 30px;
+        font-size: .75em;
+        outline: none;
+        border: 1px solid transparent;
+        cursor: pointer;
+        &-pink {
+            @include button-bg($secondary-color);
+            +.btn-border {
+                @include button-border($secondary-color)
+            }
+        }
+        &-blue {
+            @include button-bg($primary-color);
+            +.btn-border {
+                @include button-border($primary-color)
+            }
+        }
+        &-white {
+            @include button-bg($light-color);
+            +.btn-border {
+                @include button-border($light-color)
+            }
+        }
+    }

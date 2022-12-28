@@ -1,0 +1,233 @@
+/* Variables */
+/*  */
+html,
+body {
+  width: 100%;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.header {
+  background-image: url("../Images/hero.jpg");
+  height: 100vh;
+  /* Set a specified height */
+  background-position: center;
+  /* Center the image */
+  background-repeat: no-repeat;
+  /* Do not repeat the image */
+  background-size: cover;
+  /* Resize the background image to cover the entire container */
+}
+
+.header-top {
+  margin: 0;
+  height: 60px;
+  background-color: #000095;
+  text-align: center;
+  font-size: 12px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.header-top-paragraph {
+  margin: 0;
+  color: #c8c8ff;
+}
+
+.header-top-link {
+  margin: 0;
+  text-decoration: underline;
+  color: #fb6ca3;
+  margin-left: 1rem;
+}
+
+.navbar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: auto 1rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.navbar-container {
+  width: 100%;
+}
+
+.navbar-toggler {
+  display: none;
+}
+
+.navbar-toggler-icon {
+  -webkit-transition: all 0.25s;
+  position: absolute;
+  width: 30px;
+  height: 1px;
+  left: 15px;
+  top: 30px;
+  background-color: white;
+}
+
+.navbar-toggler-icon:before, .navbar-toggler-icon:after {
+  -webkit-transition: all 0.25s;
+  width: 30px;
+  height: 1px;
+  left: 0;
+  background: white;
+  position: absolute;
+  content: '';
+}
+
+.navbar-toggler-icon:before {
+  top: -10px;
+}
+
+.navbar-toggler-icon:after {
+  top: 10px;
+}
+
+.nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.nav-item {
+  list-style-type: none;
+  color: #FFFFFF;
+  margin: 1rem;
+}
+
+.btn {
+  color: #FFFFFF;
+  height: 60px;
+  min-width: 140px;
+  text-decoration: none;
+  padding: 0.5rem 2rem;
+  border-radius: 30px;
+  font-size: .75em;
+  outline: none;
+  border: 1px solid transparent;
+  cursor: pointer;
+}
+
+.btn-pink {
+  background: #F93B84;
+}
+
+.btn-pink:hover {
+  background: #f8136b;
+  -webkit-transition: all .6s;
+  transition: all .6s;
+}
+
+.btn-pink:active {
+  background: #af0547;
+}
+
+.btn-pink + .btn-border {
+  position: relative;
+  margin: 0 auto;
+}
+
+.btn-pink + .btn-border:before {
+  content: "";
+  background: none;
+  border: 1px solid #F93B84;
+  border-radius: 30px;
+  display: block;
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  right: 1rem;
+  bottom: 1rem;
+  pointer-events: none;
+  margin: -1.25rem;
+}
+
+.btn-blue {
+  background: #3B8EF9;
+}
+
+.btn-blue:hover {
+  background: #1377f8;
+  -webkit-transition: all .6s;
+  transition: all .6s;
+}
+
+.btn-blue:active {
+  background: #0550af;
+}
+
+.btn-blue + .btn-border {
+  position: relative;
+  margin: 0 auto;
+}
+
+.btn-blue + .btn-border:before {
+  content: "";
+  background: none;
+  border: 1px solid #3B8EF9;
+  border-radius: 30px;
+  display: block;
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  right: 1rem;
+  bottom: 1rem;
+  pointer-events: none;
+  margin: -1.25rem;
+}
+
+.btn-white {
+  background: #FFFFFF;
+}
+
+.btn-white:hover {
+  background: #ebebeb;
+  -webkit-transition: all .6s;
+  transition: all .6s;
+}
+
+.btn-white:active {
+  background: #bfbfbf;
+}
+
+.btn-white + .btn-border {
+  position: relative;
+  margin: 0 auto;
+}
+
+.btn-white + .btn-border:before {
+  content: "";
+  background: none;
+  border: 1px solid #FFFFFF;
+  border-radius: 30px;
+  display: block;
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  right: 1rem;
+  bottom: 1rem;
+  pointer-events: none;
+  margin: -1.25rem;
+}
+/*# sourceMappingURL=index.css.map */
