@@ -1,0 +1,29 @@
+@mixin button-bg($bg) {
+    background: $bg;
+    &:hover {
+        background: darken($bg, 8%);
+        transition: all .6s;
+    }
+    &:active {
+        background: darken($bg, 25%);
+    }
+}
+
+@mixin button-border($bg) {
+    position: relative;
+    margin: 0 auto;
+    &:before {
+        content: "";
+        background: none;
+        border: 1px solid $bg;
+        border-radius: 30px;
+        display: block;
+        position: absolute;
+        top: 1rem;
+        left: 1rem;
+        right: 1rem;
+        bottom: 1rem;
+        pointer-events: none;
+        margin: -1.25rem
+    }
+}

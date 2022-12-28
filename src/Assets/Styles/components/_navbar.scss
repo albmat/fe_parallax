@@ -1,0 +1,80 @@
+.navbar {
+    display: flex;
+    margin: auto;
+    align-items: center;
+    width: 100%;
+    height: 80px;
+    &-brand {
+        margin: 1rem;
+    }
+    &-container {
+        width: 100%;
+    }
+    &-toggler {
+        display: none;
+        position: absolute;
+        top: 0;
+        right: 0;
+        background: $tertiary-color;
+        height: 80px;
+        width: 100%;
+        &-icon {
+            position: absolute;
+            left: 18px;
+            top: 22px;
+            cursor: pointer;
+            padding: 10px 35px 16px 0px;
+            span,
+            span:before,
+            span:after {
+                cursor: pointer;
+                border-radius: 1px;
+                height: 5px;
+                width: 35px;
+                background: $link-hover-color;
+                position: absolute;
+                display: block;
+                content: '';
+                transition: all 300ms ease-in-out;
+            }
+            span:before {
+                top: -10px;
+            }
+            span:after {
+                bottom: -10px;
+            }
+            &.active span {
+                background-color: transparent;
+                &:before,
+                &:after {
+                    top: 0;
+                }
+                &:before {
+                    transform: rotate(45deg);
+                }
+                &:after {
+                    transform: rotate(-45deg);
+                }
+            }
+        }
+    }
+}
+
+.nav {
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    &-item {
+        list-style-type: none;
+        color: $light-color;
+        margin: 1.2rem;
+    }
+}
+
+@media only screen and (max-width: $breakpoint) {
+    .navbar {
+        &-toggler {
+            display: block;
+        }
+    }
+}

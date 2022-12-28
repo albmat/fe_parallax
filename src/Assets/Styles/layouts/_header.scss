@@ -1,0 +1,31 @@
+.header {
+    background-image: url("../Images/hero.jpg");
+    height: 100vh;
+    /* Set a specified height */
+    background-position: center;
+    /* Center the image */
+    background-repeat: no-repeat;
+    /* Do not repeat the image */
+    background-size: cover;
+    /* Resize the background image to cover the entire container */
+    &-top {
+        margin: 0;
+        height: 60px;
+        background-color: $tertiary-color;
+        text-align: center;
+        font-size: 12px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        &-paragraph {
+            margin: 0;
+            color: lighten($tertiary-color, 60%)
+        }
+        &-link {
+            margin: 0;
+            text-decoration: underline;
+            color: lighten($secondary-color, 10%);
+            margin-left: 1rem;
+        }
+    }
+}

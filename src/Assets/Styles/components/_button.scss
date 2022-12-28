@@ -1,0 +1,31 @@
+.btn {
+    color: $light-color;
+    height: 60px;
+    min-width: 140px;
+    text-decoration: none;
+    padding: 0.5rem 2rem;
+    border-radius: 30px;
+    font-size: .75em;
+    outline: none;
+    border: 1px solid transparent;
+    cursor: pointer;
+    margin: 1rem;
+    &-pink {
+        @include button-bg($secondary-color);
+        +.btn-border {
+            @include button-border($secondary-color)
+        }
+    }
+    &-blue {
+        @include button-bg($primary-color);
+        +.btn-border {
+            @include button-border($primary-color)
+        }
+    }
+    &-white {
+        @include button-bg($light-color);
+        +.btn-border {
+            @include button-border($light-color)
+        }
+    }
+}

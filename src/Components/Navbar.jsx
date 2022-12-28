@@ -8,13 +8,12 @@ export default function Navbar() {
         <img src={logo} alt="logo" />
       </a>
       <div className="navbar-container">
-        <button
-          className="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarContent">
-          <span className="navbar-toggler-icon"></span>
-        </button>
+        <div className="navbar-toggler">
+          <a className="navbar-toggler-icon" href="#!">
+            <span></span>
+          </a>
+        </div>
+
         <div className="navbar-collapse" id="navbarContent">
           <ul className="nav">
             <li className="nav-item">
@@ -51,3 +50,11 @@ export default function Navbar() {
     </nav>
   );
 }
+
+// <button
+//   className="navbar-toggler"
+//   type="button"
+//   data-bs-toggle="collapse"
+//   data-bs-target="#navbarContent">
+//   <span className="navbar-toggler-icon"></span>
+// </button>
