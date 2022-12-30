@@ -1,20 +1,32 @@
+import { useState } from "react";
 import logo from "../Assets/Images/logo.svg";
 import Button from "./Button";
 
 export default function Navbar() {
+  const [isNavExpanded, setIsNavExpanded] = useState(false);
+
   return (
     <nav className="navbar">
-      <a className="navbar-brand" href="/">
-        <img src={logo} alt="logo" />
-      </a>
       <div className="navbar-container">
-        <div className="navbar-toggler">
-          <a className="navbar-toggler-icon" href="#!">
-            <span></span>
-          </a>
-        </div>
+        <a className="navbar-brand" href="/">
+          <img src={logo} alt="logo" />
+        </a>
+        <button
+          className={
+            isNavExpanded ? "navbar-toggler toggled" : "navbar-toggler"
+          }
+          type="button"
+          onClick={() => {
+            console.log("hello");
+            setIsNavExpanded((curr) => !curr);
+          }}>
+          <span className="navbar-toggler-icon"></span>
+        </button>
 
-        <div className="navbar-collapse" id="navbarContent">
+        <div
+          className={
+            isNavExpanded ? "navbar-collapse collapsed" : "navbar-collapse"
+          }>
           <ul className="nav">
             <li className="nav-item">
               <a className="nav-link" href="#about">
@@ -42,19 +54,13 @@ export default function Navbar() {
               </a>
             </li>
           </ul>
+          <div>
+            <Button color="pink" variant="solid">
+              GET ZICKET
+            </Button>
+          </div>
         </div>
       </div>
-      <Button color="pink" variant="solid">
-        GET ZICKET
-      </Button>
     </nav>
   );
 }
-
-// <button
-//   className="navbar-toggler"
-//   type="button"
-//   data-bs-toggle="collapse"
-//   data-bs-target="#navbarContent">
-//   <span className="navbar-toggler-icon"></span>
-// </button>
