@@ -27,3 +27,11 @@
         margin: -1.25rem
     }
 }
+
+@mixin typo-title($size) {
+    font-size: $size;
+    font-family: Helvetica;
+    color: transparent;
+    -webkit-text-stroke: 1px $light-color;
+    text-transform: uppercase;
+}

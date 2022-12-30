@@ -8,6 +8,7 @@
     /* Do not repeat the image */
     background-size: cover;
     /* Resize the background image to cover the entire container */
+    position: relative;
     &-top {
         margin: 0;
         height: 60px;
@@ -27,5 +28,41 @@
             color: lighten($secondary-color, 10%);
             margin-left: 1rem;
         }
+    }
+    &-center {
+        color: $light-color;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+    }
+    &-bottom {
+        color: $light-color;
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        text-align: center;
+        text-transform: uppercase;
+        width: 100%;
+        hr {
+            border: 0;
+            width: 50%;
+            background-image: linear-gradient(to right, transparent, #D8D8D8, transparent);
+            height: 1px;
+        }
+        &-video {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            float: right;
+            margin: 20px;
+            border: 1px solid #D8D8D8;
+            padding: 5px;
+        }
+    }
+    &-title {
+        @include typo-title(70px)
     }
 }

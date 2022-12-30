@@ -10,21 +10,24 @@
     border: 1px solid transparent;
     cursor: pointer;
     margin: 1rem;
+    svg {
+        vertical-align: middle;
+    }
     &-pink {
         @include button-bg($secondary-color);
-        +.btn-border {
+        &.btn-border {
             @include button-border($secondary-color)
         }
     }
     &-blue {
         @include button-bg($primary-color);
-        +.btn-border {
+        &.btn-border {
             @include button-border($primary-color)
         }
     }
     &-white {
         @include button-bg($light-color);
-        +.btn-border {
+        &.btn-border {
             @include button-border($light-color)
         }
     }

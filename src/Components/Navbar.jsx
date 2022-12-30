@@ -27,29 +27,29 @@ export default function Navbar() {
           className={
             isNavExpanded ? "navbar-collapse collapsed" : "navbar-collapse"
           }>
-          <ul className="nav">
-            <li className="nav-item">
-              <a className="nav-link" href="#about">
+          <ul className="navbar-nav">
+            <li className="navbar-nav-item">
+              <a className="navbar-nav-link" href="#about">
                 About
               </a>
             </li>
-            <li className="nav-item">
-              <a className="nav-link" href="#features">
+            <li className="navbar-nav-item">
+              <a className="navbar-nav-link" href="#features">
                 Features
               </a>
             </li>
-            <li className="nav-item">
-              <a className="nav-link" href="#clients">
+            <li className="navbar-nav-item">
+              <a className="navbar-nav-link" href="#clients">
                 Clients
               </a>
             </li>
-            <li className="nav-item">
-              <a className="nav-link" href="#news">
+            <li className="navbar-nav-item">
+              <a className="navbar-nav-link" href="#news">
                 News
               </a>
             </li>
-            <li className="nav-item">
-              <a className="nav-link" href="#faqs">
+            <li className="navbar-nav-item">
+              <a className="navbar-nav-link" href="#faqs">
                 FAQs
               </a>
             </li>
