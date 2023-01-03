@@ -12,6 +12,22 @@ a {
   color: inherit;
 }
 
+p {
+  font-size: pxToRen(14px);
+}
+
+h1 {
+  font-size: pxToRen(32px);
+}
+
+h2 {
+  font-size: pxToRen(30px);
+}
+
+h1 {
+  font-size: pxToRen(28px);
+}
+
 /**
 *
 * Testing
@@ -641,5 +657,15 @@ a {
   text-align: center;
   display: block;
   margin: auto;
+}
+
+@media (max-width: 1024px) {
+  .thumbnail {
+    position: relative;
+    right: 50%;
+    -webkit-transform: translateX(50%);
+            transform: translateX(50%);
+    margin: 0;
+  }
 }
 /*# sourceMappingURL=index.css.map */

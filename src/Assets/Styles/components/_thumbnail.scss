@@ -35,4 +35,10 @@
             margin: auto;
         }
     }
+    @include media("<=desktop") {
+        position: relative;
+        right: 50%;
+        transform: translateX(50%);
+        margin: 0;
+    }
 }
