@@ -1,8 +1,13 @@
+import { useState } from "react";
 import Navbar from "../Components/Navbar";
 import Button from "../Components/Button";
+import Thumbnail from "../Components/Thumbnail";
+import VideoModal from "../Components/VideoModal";
 import { ArrowRight } from "react-bootstrap-icons";
 
 export default function Header() {
+  const [modal, setModal] = useState(false);
+
   return (
     <header className="header">
       <div className="header-top">
@@ -29,13 +34,9 @@ export default function Header() {
         <p>
           Over 3,000,000 Tickets Sold at some of Asia's Top Events Last Year
         </p>
-        <iframe
-          title="Video"
-          className="header-bottom-video"
-          width="190"
-          height="115"
-          src="https://www.youtube.com/embed/tgbNymZ7vqY"></iframe>
+        <Thumbnail modal={modal} setModal={setModal} />
       </div>
+      <VideoModal modal={modal} setModal={setModal} />
     </header>
   );
 }

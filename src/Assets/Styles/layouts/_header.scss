@@ -52,15 +52,6 @@
             background-image: linear-gradient(to right, transparent, #D8D8D8, transparent);
             height: 1px;
         }
-        &-video {
-            position: absolute;
-            right: 0;
-            bottom: 0;
-            float: right;
-            margin: 20px;
-            border: 1px solid #D8D8D8;
-            padding: 5px;
-        }
     }
     &-title {
         @include typo-title(70px)
