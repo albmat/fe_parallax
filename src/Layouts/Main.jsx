@@ -1,6 +1,8 @@
 import { Container, Row, Col, Card } from "react-bootstrap";
 import payments from "../Assets/Images/payments.png";
 import promotion from "../Assets/Images/promotion.png";
+import rfid from "../Assets/Images/rfid.png";
+import analysis from "../Assets/Images/analysis.png";
 
 export default function Main() {
   return (
@@ -52,6 +54,42 @@ export default function Main() {
               <Col xs={{ order: 1 }} md="12" lg className="p-5 m-auto">
                 <Card bg="primary" className="border-0">
                   <Card.Img alt="Promotion" src={promotion} />
+                </Card>
+              </Col>
+            </Row>
+          </li>
+          <li>
+            <Row className="p-5">
+              <Col md="12" lg className="p-5">
+                <Card bg="primary" className="border-0">
+                  <Card.Img alt="RFID" src={rfid} />
+                </Card>
+              </Col>
+              <Col md="12" lg className="p-5 m-auto">
+                <h4>Entry & RFID</h4>
+                <p>
+                  Quickly build your dedicated events page in English & Chinese.
+                  Accept payments from all major providers through our safe and
+                  reliable checkout.
+                </p>
+                <p>Explore features</p>
+              </Col>
+            </Row>
+          </li>
+          <li>
+            <Row className="p-5 ">
+              <Col md="12" lg className="p-5 m-auto">
+                <h4>Support & Analysis</h4>
+                <p>
+                  View sales & audience data in real-time. Maximise event reach
+                  via Zicket’s Social Media channels, eDM Database and partner
+                  network.
+                </p>
+                <p>Explore features</p>
+              </Col>
+              <Col xs={{ order: 1 }} md="12" lg className="p-5 m-auto">
+                <Card bg="primary" className="border-0">
+                  <Card.Img alt="Analysis" src={analysis} />
                 </Card>
               </Col>
             </Row>
