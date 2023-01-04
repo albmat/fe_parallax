@@ -17,7 +17,6 @@ export default function Navbar() {
           }
           type="button"
           onClick={() => {
-            console.log("hello");
             setIsNavExpanded((curr) => !curr);
           }}>
           <span className="navbar-toggler-icon"></span>

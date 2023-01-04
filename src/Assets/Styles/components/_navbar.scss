@@ -84,13 +84,14 @@
         @include media("<=tablet") {
             display: none;
             &.collapsed {
-                // background-color: $tertiary-color;
+                background-color: $tertiary-color;
                 position: absolute;
-                top: 140px;
+                top: 105px;
                 width: 100%;
-                height: calc(100vh - 140px);
+                height: calc(100vh - 105px);
                 display: flex;
                 flex-direction: column;
+                z-index: 10;
                 ul {
                     display: flex;
                     flex-direction: column;
@@ -119,5 +120,8 @@
             color: $light-color;
             margin: 1.2rem;
         }
+    }
+    @include media("<=tablet") {
+        background-color: $tertiary-color;
     }
 }

@@ -1,38 +1,9 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
-html,
-body {
-  width: 100%;
-  margin: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-}
-
-a {
-  text-decoration: none;
-  color: inherit;
-}
-
-p {
-  font-size: pxToRen(14px);
-}
-
-h1 {
-  font-size: pxToRen(32px);
-}
-
-h2 {
-  font-size: pxToRen(30px);
-}
-
-h1 {
-  font-size: pxToRen(28px);
-}
-
 /**
 *
 * Testing
 *
 **/
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
 @media (max-width: 320px) {
   .include-media-test {
     background-color: #def;
@@ -84,6 +55,75 @@ h1 {
   }
 }
 
+html,
+body {
+  width: 100%;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+html {
+  /* 62.5% of 16px browser font size is 10px */
+  font-size: 62.5%;
+}
+
+@media (max-width: 768px) {
+  html {
+    font-size: 40%;
+  }
+}
+
+body {
+  /* 1.6 * 10px = 16px */
+  font-size: 1.6rem;
+}
+
+p {
+  /* 1.6 * 10px = 16px */
+  font-size: 1.6rem;
+}
+
+h1 {
+  /* 7.0 * 10px = 70px */
+  font-size: 7rem;
+}
+
+h2 {
+  /* 5.0 * 10px = 50px */
+  font-size: 5rem;
+}
+
+h3 {
+  /* 3.6 * 10px = 36px */
+  font-size: 3.6rem;
+}
+
+.typo-empty {
+  font-family: Helvetica;
+  color: transparent;
+  -webkit-text-stroke: 1px #FFFFFF;
+  text-transform: uppercase;
+}
+
+.typo-ol {
+  counter-reset: item;
+}
+
+.typo-ol li {
+  display: block;
+}
+
+.typo-ol li::before {
+  content: counter(item);
+  counter-increment: item;
+}
+
 .header {
   background-image: url("../Images/hero.jpg");
   height: 100vh;
@@ -127,6 +167,12 @@ h1 {
   margin-left: 1rem;
 }
 
+@media (max-width: 1023px) {
+  .header-top {
+    height: 25px;
+  }
+}
+
 .header-center {
   color: #FFFFFF;
   position: absolute;
@@ -135,6 +181,15 @@ h1 {
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   text-align: center;
+}
+
+@media (max-width: 1023px) {
+  .header-center {
+    top: 0;
+    -webkit-transform: translate(-50%, 0);
+            transform: translate(-50%, 0);
+    margin-top: 15rem;
+  }
 }
 
 .header-bottom {
@@ -156,14 +211,6 @@ h1 {
   background-image: -webkit-gradient(linear, left top, right top, from(transparent), color-stop(#D8D8D8), to(transparent));
   background-image: linear-gradient(to right, transparent, #D8D8D8, transparent);
   height: 1px;
-}
-
-.header-title {
-  font-size: 70px;
-  font-family: Helvetica;
-  color: transparent;
-  -webkit-text-stroke: 1px #FFFFFF;
-  text-transform: uppercase;
 }
 
 .navbar {
@@ -294,10 +341,11 @@ h1 {
     display: none;
   }
   .navbar-collapse.collapsed {
+    background-color: #000095;
     position: absolute;
-    top: 140px;
+    top: 105px;
     width: 100%;
-    height: calc(100vh - 140px);
+    height: calc(100vh - 105px);
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -305,6 +353,7 @@ h1 {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    z-index: 10;
   }
   .navbar-collapse.collapsed ul {
     display: -webkit-box;
@@ -355,10 +404,16 @@ h1 {
   margin: 1.2rem;
 }
 
+@media (max-width: 768px) {
+  .navbar {
+    background-color: #000095;
+  }
+}
+
 .btn {
   color: #FFFFFF;
   height: 60px;
-  min-width: 140px;
+  min-width: 120px;
   text-decoration: none;
   padding: 0.5rem 2rem;
   border-radius: 30px;
@@ -404,7 +459,7 @@ h1 {
   right: 1rem;
   bottom: 1rem;
   pointer-events: none;
-  margin: -1.25rem;
+  margin: -1.5rem;
 }
 
 .btn-blue {
@@ -438,7 +493,7 @@ h1 {
   right: 1rem;
   bottom: 1rem;
   pointer-events: none;
-  margin: -1.25rem;
+  margin: -1.5rem;
 }
 
 .btn-white {
@@ -472,7 +527,14 @@ h1 {
   right: 1rem;
   bottom: 1rem;
   pointer-events: none;
-  margin: -1.25rem;
+  margin: -1.5rem;
+}
+
+@media (max-width: 768px) {
+  .btn {
+    height: 30px;
+    min-width: 60px;
+  }
 }
 
 .modal__bg {
@@ -637,7 +699,6 @@ h1 {
   height: 50px;
   width: 50px;
   background-color: rgba(0, 0, 0, 0.5);
-  z-index: 10;
   border-radius: 50%;
   display: inline-block;
 }

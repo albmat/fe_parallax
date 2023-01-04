@@ -24,16 +24,8 @@
         right: 1rem;
         bottom: 1rem;
         pointer-events: none;
-        margin: -1.25rem
+        margin: -1.5rem
     }
-}
-
-@mixin typo-title($size) {
-    font-size: $size;
-    font-family: Helvetica;
-    color: transparent;
-    -webkit-text-stroke: 1px $light-color;
-    text-transform: uppercase;
 }
 
 @mixin center() {
