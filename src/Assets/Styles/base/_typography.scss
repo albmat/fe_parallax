@@ -26,25 +26,46 @@ h2 {
     font-size: 5rem;
 }
 
-h3 {
+h4 {
     /* 3.6 * 10px = 36px */
     font-size: 3.6rem;
 }
 
 .typo-empty {
-    font-family: Helvetica;
-    color: transparent;
-    -webkit-text-stroke: 1px $light-color;
-    text-transform: uppercase;
+    &-white {
+        @include typo-empty-color($light-color)
+    }
+    &-blue {
+        @include typo-empty-color($primary-color)
+    }
+}
+
+.typo-solid {
+    &-white {
+        @include typo-color($light-color)
+    }
+    &-blue {
+        @include typo-color($primary-color)
+    }
 }
 
 .typo-ol {
     counter-reset: item;
+    padding: 0;
     li {
-        display: block;
-        &::before {
-            content: counter(item);
-            counter-increment: item;
+        display: flex;
+        h4 {
+            position: relative;
+            font-family: $font-primary;
+            font-weight: bold;
+            &::before {
+                content: counter(item, decimal-leading-zero);
+                counter-increment: item;
+                position: absolute;
+                bottom: -0.6rem;
+                font-size: 6rem;
+                opacity: 0.5;
+            }
         }
     }
 }

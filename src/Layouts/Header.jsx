@@ -20,7 +20,9 @@ export default function Header() {
       </section>
       <Navbar />
       <section className="header-center">
-        <h1 className="header-title typo-empty">Make your event a success</h1>
+        <h1 className="header-title typo-empty-white">
+          Make your event a success
+        </h1>
         <p>
           Zicket handles all the hassle of selling tickets for every type of
           event.

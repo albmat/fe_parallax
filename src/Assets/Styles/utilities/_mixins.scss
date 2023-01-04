@@ -34,3 +34,16 @@
     left: 50%;
     transform: translate(-50%, -50%);
 }
+
+@mixin typo-empty-color($color) {
+    font-family: Helvetica;
+    color: transparent;
+    text-transform: uppercase;
+    -webkit-text-stroke: 2px $color;
+}
+
+@mixin typo-color($color) {
+    font-family: Helvetica;
+    color: $color;
+    text-transform: uppercase;
+}

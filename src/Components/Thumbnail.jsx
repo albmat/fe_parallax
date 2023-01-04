@@ -7,14 +7,10 @@ export default function Thumbnail({ modal, setModal }) {
   };
 
   return (
-    <section className="thumbnail">
-      <img alt="Video" className="thumbnail-img" src={thumb} />
-      <div className="thumbnail-icon-circle" onClick={openModal}>
-        <BsPlay
-          className="thumbnail-icon-play"
-          fadein="none"
-          fontSize={"30px"}
-        />
+    <section className="thumb">
+      <img alt="Video" className="thumb-img" src={thumb} />
+      <div className="thumb-icon-circle" onClick={openModal}>
+        <BsPlay className="thumb-icon-play" fadein="none" fontSize={"30px"} />
       </div>
     </section>
   );
