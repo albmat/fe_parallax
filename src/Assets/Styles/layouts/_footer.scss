@@ -1,0 +1,48 @@
+.footer {
+    &-top {
+        background-color: darken($tertiary-color, 5%);
+    }
+    &-input {
+        color: $light-color;
+        width: 70%;
+        background-color: transparent;
+        outline: transparent;
+        border: none;
+        border-bottom: 1px solid $light-color;
+        padding: 1rem;
+        font-weight: lighter;
+        &::placeholder {
+            color: $light-color;
+            font-weight: lighter;
+        }
+        &:focus {
+             ::placeholder {
+                color: transparent;
+            }
+        }
+    }
+    &-bottom {
+        background-color: darken($tertiary-color, 10%);
+        hr {
+            opacity: 1 !important;
+        }
+    }
+    &-container {
+        display: table;
+        /* Make the container element behave like a table */
+        width: 100%;
+        /* Set full-width to expand the whole page */
+    }
+    &-cell {
+        display: table-cell;
+        /* Make elements inside the container behave like table cells */
+    }
+    &-list {
+        padding: 0;
+        &-item {
+            list-style-type: none;
+            color: $light-color;
+            margin: 1.2rem 0;
+        }
+    }
+}

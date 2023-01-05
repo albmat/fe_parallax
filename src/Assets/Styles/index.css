@@ -63,6 +63,7 @@ body {
           box-sizing: border-box;
   font-family: "Open Sans", sans-serif;
   color: #5A6488;
+  font-weight: lighter;
 }
 
 a {
@@ -82,13 +83,13 @@ html {
 }
 
 body {
-  /* 1.6 * 10px = 16px */
-  font-size: 1.6rem;
+  /* 1.4 * 10px = 14px */
+  font-size: 1.4rem;
 }
 
 p {
-  /* 1.6 * 10px = 16px */
-  font-size: 1.6rem;
+  /* 1.4 * 10px = 14px */
+  font-size: 1.4rem;
 }
 
 h1 {
@@ -104,6 +105,16 @@ h2 {
 h4 {
   /* 3.6 * 10px = 36px */
   font-size: 3.6rem;
+}
+
+h5 {
+  /* 2.6 * 10px = 26px */
+  font-size: 2.6rem;
+}
+
+h6 {
+  /* 1.6 * 10px = 16px */
+  font-size: 1.6rem;
 }
 
 .typo-empty-white {
@@ -267,6 +278,87 @@ h4 {
   border-top: 10rem solid #fff;
   border-left: 100vw solid transparent;
   width: 0;
+}
+
+.footer-top {
+  background-color: #00007c;
+}
+
+.footer-input {
+  color: #FFFFFF;
+  width: 70%;
+  background-color: transparent;
+  outline: transparent;
+  border: none;
+  border-bottom: 1px solid #FFFFFF;
+  padding: 1rem;
+  font-weight: lighter;
+}
+
+.footer-input::-webkit-input-placeholder {
+  color: #FFFFFF;
+  font-weight: lighter;
+}
+
+.footer-input:-ms-input-placeholder {
+  color: #FFFFFF;
+  font-weight: lighter;
+}
+
+.footer-input::-ms-input-placeholder {
+  color: #FFFFFF;
+  font-weight: lighter;
+}
+
+.footer-input::placeholder {
+  color: #FFFFFF;
+  font-weight: lighter;
+}
+
+.footer-input:focus ::-webkit-input-placeholder {
+  color: transparent;
+}
+
+.footer-input:focus :-ms-input-placeholder {
+  color: transparent;
+}
+
+.footer-input:focus ::-ms-input-placeholder {
+  color: transparent;
+}
+
+.footer-input:focus ::placeholder {
+  color: transparent;
+}
+
+.footer-bottom {
+  background-color: #000062;
+}
+
+.footer-bottom hr {
+  opacity: 1 !important;
+}
+
+.footer-container {
+  display: table;
+  /* Make the container element behave like a table */
+  width: 100%;
+  /* Set full-width to expand the whole page */
+}
+
+.footer-cell {
+  display: table-cell;
+  /* Make elements inside the container behave like table cells */
+}
+
+.footer-list {
+  padding: 0;
+}
+
+.footer-list-item {
+  list-style-type: none;
+  color: #FFFFFF;
+  margin: 1.2rem 0;
 }
 
 .nav {
@@ -874,7 +966,6 @@ h4 {
 .carousel-text {
   color: #FFFFFF;
   margin: 0;
-  font-weight: lighter;
 }
 
 .carousel-control-btn {
