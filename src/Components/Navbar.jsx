@@ -49,7 +49,7 @@ export default function Navbar() {
               </a>
             </li>
           </ul>
-          <div>
+          <div className="nav-collapse-btn">
             <Button color="pink" variant="solid">
               GET ZICKET
             </Button>

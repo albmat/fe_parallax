@@ -1,3 +1,19 @@
 .bg-primary {
     background-color: rgba($primary-color, 0.1) !important;
 }
+
+.main {
+    &-bottom {
+        background-image: linear-gradient(to bottom right, $tertiary-color, $primary-color);
+        position: relative;
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            border-top: 10rem solid #fff;
+            border-left: 100vw solid transparent;
+            width: 0;
+        }
+    }
+}

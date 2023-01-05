@@ -1,5 +1,4 @@
 .btn {
-    color: $light-color;
     height: 60px;
     min-width: 120px;
     text-decoration: none;
@@ -14,18 +13,21 @@
         vertical-align: middle;
     }
     &-pink {
+        color: $light-color;
         @include button-bg($secondary-color);
         &.btn-border {
             @include button-border($secondary-color)
         }
     }
     &-blue {
+        color: $light-color;
         @include button-bg($primary-color);
         &.btn-border {
             @include button-border($primary-color)
         }
     }
     &-white {
+        color: $primary-color;
         @include button-bg($light-color);
         &.btn-border {
             @include button-border($light-color)

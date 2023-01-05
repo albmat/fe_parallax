@@ -40,8 +40,8 @@
         transform: translate(-50%, -50%);
         text-align: center;
         @include media("<desktop") {
-            top: 0;
-            transform: translate(-50%, 0);
+            position: static;
+            transform: none;
             margin-top: 15rem;
         }
     }

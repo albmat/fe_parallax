@@ -1,0 +1,38 @@
+.explore {
+    text-transform: uppercase;
+    color: $primary-color;
+    &-btn {
+        color: inherit;
+        position: relative;
+        &-outer-circle {
+            @include center();
+            cursor: pointer;
+            height: 55px;
+            width: 55px;
+            border: 1px solid $primary-color;
+            border-radius: 50%;
+            display: inline-block;
+        }
+        &-inner-circle {
+            @include center();
+            cursor: pointer;
+            height: 45px;
+            width: 45px;
+            background-color: rgba($primary-color, 0.4);
+            border-radius: 50%;
+            display: inline-block;
+            &:hover {
+                background: rgba($primary-color, 0.7);
+                transition: all .6s;
+                &>.explore-btn-icon {
+                    color: $light-color;
+                    transition: all .6s;
+                }
+            }
+        }
+        &-icon {
+            @include center();
+            color: inherit;
+        }
+    }
+}

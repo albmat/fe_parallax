@@ -1,0 +1,57 @@
+.carousel {
+    &-container {
+        display: flex;
+        max-width: 100vw;
+        overflow-x: scroll;
+    }
+    &-pic {
+        display: flex;
+        object-fit: cover;
+        width: 350px;
+        height: 550px;
+    }
+    &-figure {}
+    &-title {
+        text-transform: uppercase;
+    }
+    &-text {
+        color: $light-color;
+        margin: 0;
+        font-weight: lighter;
+    }
+    &-control {
+        &-btn {
+            color: inherit;
+            &-outer-circle {
+                position: relative;
+                cursor: pointer;
+                height: 55px;
+                width: 55px;
+                border: 1px solid $light-color;
+                border-radius: 50%;
+                display: inline-block;
+            }
+            &-inner-circle {
+                @include center();
+                cursor: pointer;
+                height: 45px;
+                width: 45px;
+                background-color: rgba($light-color, 0.4);
+                border-radius: 50%;
+                display: inline-block;
+                &:hover {
+                    background: rgba($light-color, 0.7);
+                    transition: all .6s;
+                    &>.explore-btn-icon {
+                        color: $light-color;
+                        transition: all .6s;
+                    }
+                }
+            }
+            &-icon {
+                @include center();
+                color: inherit;
+            }
+        }
+    }
+}
