@@ -1,4 +1,6 @@
+import { useState } from "react";
 import { Container, Row, Col, Card } from "react-bootstrap";
+import SignUp from "../Components/SignUp";
 import payments from "../Assets/Images/payments.png";
 import promotion from "../Assets/Images/promotion.png";
 import rfid from "../Assets/Images/rfid.png";
@@ -10,6 +12,11 @@ import Button from "../Components/Button";
 import { ArrowRight } from "react-bootstrap-icons";
 
 export default function Main() {
+  const [modal, setModal] = useState(false);
+
+  const openModal = () => {
+    setModal(!modal);
+  };
   return (
     <main className="App-main">
       <Container className="p-5">
@@ -138,13 +145,14 @@ export default function Main() {
               to your event.
             </p>
             <div className="p-5">
-              <Button color="white" variant="border">
+              <Button color="white" variant="border" onClick={openModal}>
                 Sign up <ArrowRight color="blue" size={15} />
               </Button>
             </div>
           </section>
         </Container>
       </section>
+      <SignUp modal={modal} setModal={setModal} />
     </main>
   );
 }

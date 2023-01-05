@@ -1,0 +1,48 @@
+.modal {
+    &-signup__content {
+        width: 800px;
+        box-shadow: 0px 100px 80px rgba(184, 184, 184, 0.07), 0px 25.8162px 19px 4px rgba(178, 178, 178, 0.0456112), 0px 7.779px 7.30492px rgba(0, 0, 0, 0.035), 0px 1.48838px 2.0843px rgba(0, 0, 0, 0.0243888);
+        border-radius: 20px;
+        background: $light-color;
+        margin: auto 4rem;
+    }
+}
+
+.error {
+    @include error-icon;
+    color: red;
+    background-color: rgba(red, .1);
+    padding: .5rem;
+    border-radius: .5rem;
+    margin-bottom: 2.5rem
+}
+
+.success {
+    color: green;
+    background-color: rgba(green, .1);
+    padding: .5rem;
+    border-radius: .5rem;
+}
+
+@media screen and (max-width: 800px) {
+    .modal-signup__content {
+        margin: 0rem 1rem;
+        height: 100vh;
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 499px) {
+    .modal-signup {
+        &__content {
+            height: 75vh;
+            margin: 0;
+            border-radius: unset;
+            position: relative;
+        }
+        &__form {
+            @include center();
+            width: 75%;
+        }
+    }
+}

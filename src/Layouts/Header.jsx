@@ -19,7 +19,7 @@ export default function Header() {
         </p>
       </section>
       <Navbar />
-      <section className="header-center">
+      <section className="header-center m-4">
         <h1 className="header-title typo-empty-white">
           Make your event a success
         </h1>

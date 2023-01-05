@@ -47,3 +47,34 @@
     color: $color;
     text-transform: uppercase;
 }
+
+@mixin error-icon {
+    position: relative;
+    padding-left: .5rem;
+    &:before,
+    &:after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        width: 2px;
+        font-family: 'times new roman';
+    }
+    &:after {
+        margin: .5rem;
+        height: 20px;
+        width: 20px;
+        border: 1px solid red;
+        border-radius: 50%;
+        display: inline-block;
+        z-index: 1;
+        left: 0;
+    }
+    &:before {
+        color: red;
+        content: "!";
+        font-weight: bold;
+        left: 1.3rem;
+        bottom: .35rem;
+        z-index: 2;
+    }
+}
